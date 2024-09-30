@@ -110,8 +110,9 @@
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    width: 325px;
+    height: 325px;
+    object-fit: cover;
 }
 
 .content {
