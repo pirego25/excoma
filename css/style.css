@@ -7,9 +7,10 @@
 }
 
 
-.body {
-    background-color: #EBD3F8;
+body {
+    background-color: #0f0f0f;
 }
+
 
 .main-container{
     display: grid;
