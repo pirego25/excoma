@@ -1,6 +1,8 @@
 body{
 	font-family: monospace;
 	font-size: 13pt;
+	background-color: #0f0f0f;
+	font-display: #fdfdfd;
 }
  
 th{
@@ -12,8 +14,21 @@ img{
 	margin-bottom: 10px;
 }
  
+.kanan a{
+	font-size: 17px;
+	font-weight: 550;
+	color:#ffffff;
+	text-decoration: none;
+	margin: 1px;
+	padding: 1px 7px;
+	background-color: #272727;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+
 .kotak{
-	border: 1px solid black;
+	border: 1px solid rgb(255, 255, 255);
 	width: 60%;
 	margin: 10px auto;
 	padding: 20px;
@@ -21,23 +36,94 @@ img{
  
 .judul{
 	text-align: center;
-  background: #AD49E1;
+  background: #272727;
+  color: #FFFFFF;
 }
  
 .blok{
 	overflow: hidden;
+	color: #FFFFFF;
 }
  
 .kiri{
 	width: 20%;
 	float: left;
+
 }
  
 .kanan{
 	width: 70%;
 	padding:0px 20px;	
 	float: left;
+	color: #FFFFFF;
+	color: inherit;
+	text-decoration: none !important;
 }
+
+/* button */
+.btn {
+	padding: 15px 40px;
+	margin-top: 20px;
+	border: none;
+	outline: none;
+	color: #FFF;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	border-radius: 12px;
+  }
+  .btn::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	left: 0;
+	top: 0;
+	border-radius: 10px;
+  }
+  /* glow */
+  .btn::before {
+	content: "";
+	background: linear-gradient(
+	  45deg,
+	  #FF0000, #FF7300, #FFFB00, #48FF00,
+	  #00FFD5, #002BFF, #FF00C8, #FF0000
+	);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	background-size: 600%;
+	z-index: -1;
+	width: calc(100% + 4px);
+	height:  calc(100% + 4px);
+	filter: blur(8px);
+	animation: glowing 20s linear infinite;
+	transition: opacity .3s ease-in-out;
+	border-radius: 10px;
+	opacity: 0;
+  }
+  
+  @keyframes glowing {
+	0% {background-position: 0 0;}
+	50% {background-position: 400% 0;}
+	100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn:hover::before {
+	opacity: 1;
+  }
+  
+  .btn:active:after {
+	background: transparent;
+  }
+  
+  .btn:active {
+	color: #000;
+	font-weight: bold;
+  }
  
 @media only screen and (max-width: 768px) {
 	.kotak{

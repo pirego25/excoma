@@ -1,7 +1,6 @@
 {
     "name": "EXCOMA",
     "short_name": "X Komputer A",
-    "start_url":"https://pirego25.github.io/excoma/",
     "icons": [
         {
             "src": "/img/android-chrome-192x192.png",
